@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+table{
+	border-collapse: collapse;
+  padding: 0;
+  border-spacing: 5px;
+  
+  padding:5px;
+
+}
+
+tr{
+	padding:5px;
+}
+
+th{
+	padding:3px;
+	border:2.5px solid #000;
+	 width:15px;
+  height:15px;
+  background-color:white;
+}
+th div{
+	background-color:#000;;
+}
+.full_size{
+	width:100%;
+	height:100%;
+}
+.center{
+	display:flex;
+	align-content: center;
+	justify-items: center;
+}
+</style>
+<body>
+<div is="shape-one">
+</div>
+<table> 
+
+</table>
+<script> 
+
+	class shape_1 extends HTMLDivElement{
+		constructor() {
+			super();
+			let 
+		}
+
+	}
+	customElements.define("shape-one",shape_1,{extends:'div'});
+
+	const table = document.querySelector('table');
+	let raw_num = 30
+	let col_num = 10;
+	for(let i =0; i< raw_num;i++){
+        let tr = document.createElement('tr');
+        for( let i =0; i<col_num;i++){
+            let th = document.createElement('th');
+            let parent_div = document.createElement('div');
+            let div = document.createElement('div');
+            parent_div.className = 'full_size center'
+
+            div.className = 'rect';
+            parent_div.appendChild(div);
+            th.appendChild(parent_div);
+            tr.appendChild(th);
+        }
+        table.appendChild(tr);
+        
+	}
+</script>
+</body>
+
+</html>
